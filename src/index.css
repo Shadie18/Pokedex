@@ -1,24 +1,51 @@
 @import "tailwindcss";
 
 :root {
-
+  --terminal-green: #00ff41;
+  --terminal-dim: #00aa2a;
+  --terminal-bg: #0a0f0a;
+  --terminal-card: #0d1a0d;
+  --terminal-border: #1a3a1a;
 }
+
 html {
   @apply h-full;
 }
 body {
-  @apply flex flex-col min-h-screen h-full;
+  background-color: var(--terminal-bg);
+  @apply flex flex-col min-h-screen h-full text-green-400;
+  font-family: 'Courier New', Courier, monospace;
 }
 #root {
   @apply flex flex-col min-h-screen h-full;
 }
 header {
-  @apply bg-red-500 text-white font-bold;
+  background-color: #050a05;
+  border-bottom: 1px solid #1a3a1a;
+  @apply text-green-400 font-bold;
 }
 main {
   @apply flex-1 min-h-0 overflow-y-auto;
+  background-color: var(--terminal-bg);
+}
+footer {
+  background-color: #050a05;
+  border-top: 1px solid #1a3a1a;
+  @apply text-green-400 font-bold;
 }
 
-footer {
-  @apply bg-red-500 text-white font-bold;
+/* scanline effect */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.05) 2px,
+    rgba(0,0,0,0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
 }

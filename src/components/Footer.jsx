@@ -1,13 +1,11 @@
 const Footer = () => (
-    <footer className="bg-indigo-700 text-white">
-        <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-            <div className="flex items-center gap-2">
-                <span className="text-xl" aria-hidden="true">🔴</span>
-                <span className="font-extrabold tracking-wide">PokéDex</span>
-                <span className="text-indigo-300 text-sm font-normal">202601</span>
+    <footer style={{backgroundColor:'#050a05', borderTop:'1px solid #1a3a1a'}}>
+        <div className="mx-auto max-w-7xl px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
+            <div className="flex items-center gap-2 text-green-600 text-sm font-bold tracking-widest">
+                <span className="text-green-400">[ POKÉDEX v202601 ]</span>
             </div>
-            <p className="text-sm text-indigo-200 text-center">
-                &copy; 2026 Todos los derechos reservados.
+            <p className="text-xs text-green-800 tracking-widest">
+                &copy; 2026 // TODOS LOS DERECHOS RESERVADOS
             </p>
         </div>
     </footer>
